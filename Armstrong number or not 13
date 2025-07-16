@@ -1,0 +1,39 @@
+#include <stdio.h>
+
+int main() {
+
+    int num, original, digit, result = 0;
+
+    scanf("%d", &num);
+
+    if (num < 100 || num > 999) {
+
+        printf("No\n");
+
+        return 0;
+
+    }
+
+    original = num;
+
+    while (num != 0) {
+
+        digit = num % 10;
+
+        result += digit * digit * digit;
+
+        num /= 10;
+
+    }
+
+    if (result == original)
+
+        printf("Yes\n");
+
+    else
+
+        printf("No\n");
+
+    return 0;
+
+}
